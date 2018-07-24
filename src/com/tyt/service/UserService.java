@@ -44,6 +44,7 @@ public class UserService {
 
 	}
 
+	//
 	public boolean register(User regUser) {
 		boolean flag = false;
 		
@@ -65,7 +66,6 @@ public class UserService {
 		return flag;
 	}
 	
-	
 	//
 	public boolean delete(User deleteUser) {
 		String userName = deleteUser.getUserName();
@@ -78,6 +78,21 @@ public class UserService {
 		}
 		
 		return false;
+		
+	}
+	
+	//
+	public boolean find(User user) {
+		String userName = user.getUserName();
+		
+		String hql = "from User where userName = '" + userName + "'";
+		
+		if (userDAO.find(hql)) {
+			return true;
+		}
+		else {
+			return false;
+		}
 		
 	}
 }

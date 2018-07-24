@@ -12,13 +12,20 @@
 
 		<!-- 登录Action -->
 		<action name="Login" class="com.tyt.action.UserAction" method="login">
-			<result name="success">/jsp/loginSuccess.jsp</result>
+			<result name="success">/jsp/index.jsp</result>
 			<result name="fail">/jsp/loginFail.jsp</result>
+			<result name="input">/jsp/login.jsp</result>
 		</action>
 
 		<!-- 注册Action -->
 		<action name="Register" class="com.tyt.action.UserAction" method="register">
-			<result name="success">/jsp/loginSuccess.jsp</result>
+			<result name="success">index.jsp</result>
+			<result name="fail">/jsp/loginFail.jsp</result>
+		</action>
+		
+		<!-- 登出Action -->
+		<action name="Logout" class="com.tyt.action.UserAction" method="logout">
+			<result name="success">index.jsp</result>
 			<result name="fail">/jsp/loginFail.jsp</result>
 		</action>
 
