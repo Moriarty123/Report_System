@@ -12,20 +12,24 @@
 <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
 <script
 	src="https://cdn.bootcss.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	
+	<style type="text/css">
+
+	
+	.img-circle{border-radius:50%;}
+	</style>
 </head>
 
 <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
 
-	<!-- Brand -->
-	<a class="navbar-brand"
-		href="F://study/JavaWeb/Report_System/Report_System/image/school.jpg">Logo</a>
 
-
+	
+	<a class="nav-link" href="jsp/index.jsp"><img src="image/school.jpg" class="img-circle" alt="Cinque Terre" width="50"></a>
 	<!-- <div class="navbar-collapse collapse" id="collapsibleNavbar">  -->
 	<div class="navbar-collapse collapse" id="collapsibleNavbar">
 		<!-- Links -->
 		<ul class="nav navbar-nav nav-left">
-			<li class="nav-item"><a class="nav-link" href="#">首页</a></li>
+			<li class="nav-item"><a class="nav-link" href="jsp/index.jsp">首页</a></li>
 			<s:if test="#session.isLogin=='true'">
 				<s:if test="#session.isStudent=='true'">
 					<li class="nav-item"><a class="nav-link" href="#">我的实验报告</a></li>

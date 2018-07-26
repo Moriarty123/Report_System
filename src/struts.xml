@@ -19,8 +19,9 @@
 
 		<!-- 注册Action -->
 		<action name="Register" class="com.tyt.action.UserAction" method="register">
-			<result name="success">index.jsp</result>
+			<result name="success">/jsp/index.jsp</result>
 			<result name="fail">/jsp/loginFail.jsp</result>
+			<result name="input">/jsp/register.jsp</result>
 		</action>
 		
 		<!-- 登出Action -->

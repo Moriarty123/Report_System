@@ -47,7 +47,7 @@ public class UserService {
 	//
 	public boolean register(User regUser) {
 		boolean flag = false;
-		
+		System.err.println("user:" + regUser);
 		if (userDAO.save(regUser)) {
 			return true;
 		}
