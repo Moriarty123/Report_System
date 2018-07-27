@@ -13,7 +13,7 @@
 		<!-- 登录Action -->
 		<action name="Login" class="com.tyt.action.UserAction" method="login">
 			<result name="success">/jsp/index.jsp</result>
-			<result name="fail">/jsp/loginFail.jsp</result>
+			<result name="fail">/jsp/login.jsp</result>
 			<result name="input">/jsp/login.jsp</result>
 		</action>
 

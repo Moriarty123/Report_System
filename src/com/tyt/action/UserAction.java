@@ -101,8 +101,14 @@ public class UserAction extends ActionSupport {
 //			System.out.println("login");
 			return "success";
 		}
+		else {
+			addActionError("用户名或密码错误！");
+			ActionContext.getContext().put("message", "用户名或密码错误！");
+			session.put("isLogin", "false");
+			return "fail";
+		}
 
-		return "fail";
+		
 	}
 
 	//
