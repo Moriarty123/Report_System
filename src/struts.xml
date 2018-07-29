@@ -30,5 +30,13 @@
 			<result name="fail">/jsp/loginFail.jsp</result>
 		</action>
 
+
+		<!-- ManageAction -->
+		<action name="gradeManage" class="com.tyt.action.ManageAction" method="gradeManage">
+			<result name="success">showGrade.jsp</result>
+			<result name="fail">jsp/loginFail.jsp</result>
+		</action>
+
+
 	</package>
 </struts>

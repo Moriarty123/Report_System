@@ -2,7 +2,6 @@ package com.tyt.action;
 
 import java.util.Map;
 
-import org.hibernate.Session;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

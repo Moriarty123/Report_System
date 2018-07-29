@@ -37,6 +37,7 @@
 		<property name="mappingResources">
 			<list>
 				<value>com/tyt/po/User.hbm.xml</value>
+				<value>com/tyt/po/Grade.hbm.xml</value>
 			</list>
 		</property>
 	</bean>
@@ -57,5 +58,17 @@
 	<bean id="UserService" class="com.tyt.service.UserService">
 		<property name="UserDAO" ref="UserDAO" />
 	</bean>
+	
+	<!-- ManageDAO -->
+	<bean id="ManageDAO" class="com.tyt.DAO.ManageDAO" parent="HibernateDAO">
+	
+	</bean>
+	
+	<!-- ManageService类 -->
+	<bean id="ManageService" class="com.tyt.service.ManageService">
+		<property name="ManageDAO" ref="ManageDAO" />
+	</bean>
+	
+
 	
 </beans>

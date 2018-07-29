@@ -1,7 +1,5 @@
 package com.tyt.service;
 
-import java.util.List;
-
 import com.tyt.DAO.UserDAO;
 import com.tyt.po.User;
 
