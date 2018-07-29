@@ -8,13 +8,17 @@
 <title>计算机与网络安全学院实验报告在线撰写系统</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<!--  -->
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.css">
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
+<link href="../css/base.css" rel="stylesheet" type="text/css"/>
 
 
+<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <style type="text/css">
 .img-circle {
@@ -104,7 +108,7 @@
 			<s:elseif test="#session.isLogin=='true'">
 
 				<li class="nav-item"><a class="nav-link" href=""> <span
-						class="glyphicon glyphicon-log-in"></span> 欢迎你，${userName}
+						class="glyphicon"></span> 欢迎你，${userName}
 				</a></li>
 
 

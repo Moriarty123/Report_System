@@ -53,16 +53,16 @@ public class UserAction extends ActionSupport {
 		if (userName.equals("") || userName == null || password.equals("")
 				|| password == null) {
 			addActionError("账号或密码不能为空！");
-			ActionContext.getContext().put("message", "账号或密码不能为空！");
+			ActionContext.getContext().put("error", "账号或密码不能为空！");
 
 			return "input";
 		} else if (!userService.find(user)) {
 			addActionError("该用户不存在！");
-			ActionContext.getContext().put("message", "该用户不存在！");
+			ActionContext.getContext().put("error", "该用户不存在！");
 			return "input";
 		} else {
-			addActionMessage("登录成功！");
-			ActionContext.getContext().put("message", "登录成功！");
+//			addActionMessage("登录成功！");
+//			ActionContext.getContext().put("message", "登录成功！");
 			session.put("userName", userName);
 			session.put("password", password);
 		}
@@ -80,7 +80,7 @@ public class UserAction extends ActionSupport {
 			session.put("isStudent", "false");
 			session.put("isTeacher", "true");
 		} else {
-			ActionContext.getContext().put("message", "用户名不合法！");
+			ActionContext.getContext().put("error", "用户名不合法！");
 			return "input";
 		}
 
@@ -98,12 +98,14 @@ public class UserAction extends ActionSupport {
 
 			session.put("isLogin", "true");
 
+			addActionMessage("登录成功！");
+			ActionContext.getContext().put("message", "登录成功！");
 //			System.out.println("login");
 			return "success";
 		}
 		else {
 			addActionError("用户名或密码错误！");
-			ActionContext.getContext().put("message", "用户名或密码错误！");
+			ActionContext.getContext().put("error", "用户名或密码错误！");
 			session.put("isLogin", "false");
 			return "fail";
 		}

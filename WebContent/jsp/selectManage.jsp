@@ -4,10 +4,8 @@
 <jsp:include page="base.jsp" flush="true" />
 
 <link rel="stylesheet"
-	href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
-<script
-	src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css">
+
 
 <!-- 
 <link rel='stylesheet' href='../css/selectManage.css'>
@@ -34,6 +32,9 @@ div.col-xs-9 div {
 </style>
 
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
+
+	
+
 
     <div class="container">
         <div class="row">
