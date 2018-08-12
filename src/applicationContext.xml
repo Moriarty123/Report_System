@@ -39,6 +39,8 @@
 				<value>com/tyt/po/User.hbm.xml</value>
 				<value>com/tyt/po/Grade.hbm.xml</value>
 				<value>com/tyt/po/Major.hbm.xml</value>
+				<value>com/tyt/po/Classes.hbm.xml</value>
+				<value>com/tyt/po/Course.hbm.xml</value>
 			</list>
 		</property>
 	</bean>

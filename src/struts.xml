@@ -38,10 +38,19 @@
 		</action>
 		
 		<action name="majorManage" class="com.tyt.action.ManageAction" method="majorManage">
-			<result name="success">selectManage.jsp</result>
+			<result name="success">showMajor.jsp</result>
+			<result name="fail">jsp/loginFail.jsp</result>
+		</action>
+		
+		<action name="classManage" class="com.tyt.action.ManageAction" method="classManage">
+			<result name="success">showClass.jsp</result>
 			<result name="fail">jsp/loginFail.jsp</result>
 		</action>
 
+		<action name="courseManage" class="com.tyt.action.ManageAction" method="courseManage">
+			<result name="success">showCourse.jsp</result>
+			<result name="fail">jsp/loginFail.jsp</result>
+		</action>
 
 	</package>
 </struts>

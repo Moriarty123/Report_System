@@ -14,6 +14,9 @@ public class ManageAction {
 	private ManageService service;
 	private List gradeList;
 	private List majorList;
+	private List classList;
+	private List courseList;
+	
 //	private boolean isGrade;
 	
 	public ManageService getService() {
@@ -38,6 +41,22 @@ public class ManageAction {
 
 	public void setMajorList(List majorList) {
 		this.majorList = majorList;
+	}
+
+	public List getClassList() {
+		return classList;
+	}
+
+	public void setClassList(List classList) {
+		this.classList = classList;
+	}
+
+	public List getCourseList() {
+		return courseList;
+	}
+
+	public void setCourseList(List courseList) {
+		this.courseList = courseList;
 	}
 
 	private void Init(){
@@ -66,7 +85,7 @@ public class ManageAction {
 		
 		if (!gradeList.isEmpty()) {
 //			session.put("isGrade", "true");
-			System.out.println(gradeList);
+//			System.out.println(gradeList);
 			return "success";
 		}
 		else {
@@ -80,6 +99,32 @@ public class ManageAction {
 
 		if (!majorList.isEmpty()) {
 			System.out.println(majorList);
+			return "success";
+		}
+		else {
+			return "fail";
+		}
+	}
+	
+	//
+	public String classManage() {
+		classList = service.getClasses();
+
+		if (!classList.isEmpty()) {
+			System.out.println(classList);
+			return "success";
+		}
+		else {
+			return "fail";
+		}
+	}
+	
+	//
+	public String courseManage() {
+		courseList = service.getCourse();
+
+		if (!courseList.isEmpty()) {
+			System.out.println(courseList);
 			return "success";
 		}
 		else {

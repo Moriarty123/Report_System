@@ -30,33 +30,34 @@ div.col-xs-9 div {
 
 <div class="col-xs-9">
 	<table class="table">
-
-		<h3>现有专业：</h3>
+		<h3>现有课程：</h3>
 		<thead>
 			<tr>
-				<th>专业</th>
+				<th>课程</th>
 				<th>操作</th>
 			</tr>
 		</thead>
 		<tbody>
-			<s:iterator value="majorList">
+
+			<s:iterator value="courseList">
 				<tr>
 					<td><s:property /></td>
 					<td><a href="">删除</a></td>
 				</tr>
 			</s:iterator>
+
 		</tbody>
 	</table>
 </div>
 <table>
 	<form class="bs-example bs-example-form" role="form"
 		action="/selectManage" method="POST">
-		<div class="col-lg-9">
+		<div class="col-lg-6">
 			<div class="input-group">
-				<input name="major" type="text" class="form-control"
-					placeholder="请输入专业，如：计算机科学与技术" required=""> <span
+				<input name="courseName" type="text" class="form-control"
+					placeholder="请输入课程，如：操作系统" required=""> <span
 					class="input-group-btn"> <input
-					class="rearchSubmit btn btn-primary" type="submit" value="添加专业">
+					class="rearchSubmit btn btn-primary" type="submit" value="添加课程">
 				</span>
 			</div>
 		</div>

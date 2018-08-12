@@ -29,30 +29,9 @@ public class ManageDAO extends HibernateDAO implements IManangeDAO{
 		
 		log.debug("finding grades instance by hql");
 
-		// SessionFactory sf = new
-		// Configuration().configure().buildSessionFactory();
-		// session = sf.openSession();
-
-		Session session = getSession();
-
-		try {
-			String queryString = hql;
-			Query queryObject = session.createQuery(queryString);
-
-			// System.out.println(queryObject);
-
-			return queryObject.list();
-		} catch (HibernateException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			throw e;
-		} catch (RuntimeException re) {
-			log.error("find by hql failed", re);
-			re.printStackTrace();
-			throw re;
-		} finally {
-			session.close();
-		}
+		List list = getListByHql(hql);
+		
+		return list;
 		
 	}
 
@@ -60,6 +39,33 @@ public class ManageDAO extends HibernateDAO implements IManangeDAO{
 	public List getMajor(String hql) {
 		log.debug("finding major instance by hql");
 
+		List list = getListByHql(hql);
+		
+		return list;
+	}
+	
+	//
+	public List getClass(String hql) {
+		log.debug("finding class instance by hql");
+
+		List list = getListByHql(hql);
+		
+		return list;
+	}
+
+	//
+	public List getCourse(String hql) {
+		log.debug("finding course instance by hql");
+
+		List list = getListByHql(hql);
+		
+		return list;
+	}
+	
+	//
+
+	public List getListByHql(String hql) {
+		// TODO Auto-generated method stub
 		Session session = getSession();
 
 		try {
@@ -81,4 +87,5 @@ public class ManageDAO extends HibernateDAO implements IManangeDAO{
 	}
 
 	
+
 }

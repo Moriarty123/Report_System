@@ -38,4 +38,21 @@ public class ManageService {
 		return list;
 	}
 
+	//
+	public List getClasses() {
+		String hql = "select classes from Classes";
+		
+		List list = manageDAO.getMajor(hql);
+		
+		return list;
+	}
+	
+	//
+	public List getCourse() {
+		String hql = "select courseName from Course";
+		
+		List list = manageDAO.getMajor(hql);
+		
+		return list;
+	}
 }
