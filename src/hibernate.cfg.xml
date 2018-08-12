@@ -26,5 +26,6 @@
     
     	<mapping resource="com/tyt/po/User.hbm.xml"/>
     	<mapping resource="com/tyt/po/Grade.hbm.xml"/>
+    	<mapping resource="com/tyt/po/Major.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>

@@ -29,6 +29,13 @@ public class ManageService {
 		return list;
 	}
 	
-	
+	//
+	public List getMajor() {
+		String hql = "select major from Major";
+		
+		List list = manageDAO.getMajor(hql);
+		
+		return list;
+	}
 
 }

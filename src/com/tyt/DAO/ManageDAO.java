@@ -55,7 +55,30 @@ public class ManageDAO extends HibernateDAO implements IManangeDAO{
 		}
 		
 	}
-	
+
+	//
+	public List getMajor(String hql) {
+		log.debug("finding major instance by hql");
+
+		Session session = getSession();
+
+		try {
+			String queryString = hql;
+			Query queryObject = session.createQuery(queryString);
+
+			return queryObject.list();
+		} catch (HibernateException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			throw e;
+		} catch (RuntimeException re) {
+			log.error("find by hql failed", re);
+			re.printStackTrace();
+			throw re;
+		} finally {
+			session.close();
+		}
+	}
 
 	
 }

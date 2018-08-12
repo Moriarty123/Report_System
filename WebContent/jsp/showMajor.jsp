@@ -7,6 +7,7 @@
 	href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css">
 
 <style>
+
 body {
 	position: relative;
 }
@@ -28,13 +29,7 @@ div.col-xs-9 div {
 </style>
 
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
-	<!-- 
-	<a href="gradeManage">gradeManage</a>
-	 
-	<form name="gradeForm" action="gradeManage" method="post"></form>
-	 -->
-	
-	
+
     <div class="container">
         <div class="row">
             <nav class="col-xs-3" id="myScrollspy">
@@ -97,7 +92,7 @@ div.col-xs-9 div {
                 </div>
                 
                 
-                <hr>
+               <HR style="border:0">
                 
                 
                 <div id="section2">
@@ -113,14 +108,14 @@ div.col-xs-9 div {
                                 </tr>
                             </thead>
                             <tbody>
-
+								<s:iterator value="majorList">
                                 <tr>
-                                    <td></td>
+                                    <td><s:property /></td>
                                     <td>
                                         <a href="">删除</a>
                                     </td>
                                 </tr>
-
+								</s:iterator>
                             </tbody>
                         </table>
                     </div>
@@ -141,7 +136,7 @@ div.col-xs-9 div {
                 </div>
                 
                 
-                <hr>
+                <HR style="border:0">
                 
                 
                 <div id="section3">
@@ -184,7 +179,7 @@ div.col-xs-9 div {
                 </div>
                 
                 
-                <hr>
+               <HR style="border:0">
                 
                 
                 <div id="section4">
@@ -227,7 +222,7 @@ div.col-xs-9 div {
                 </div>
  
  
- 				<hr>
+ 				<HR style="border:0">
  				
  				
             </div>

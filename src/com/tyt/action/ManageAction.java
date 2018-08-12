@@ -13,6 +13,7 @@ public class ManageAction {
 
 	private ManageService service;
 	private List gradeList;
+	private List majorList;
 //	private boolean isGrade;
 	
 	public ManageService getService() {
@@ -31,6 +32,14 @@ public class ManageAction {
 		this.gradeList = gradeList;
 	}
 
+	public List getMajorList() {
+		return majorList;
+	}
+
+	public void setMajorList(List majorList) {
+		this.majorList = majorList;
+	}
+
 	private void Init(){
 		//´´½¨springÈÝÆ÷
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
@@ -46,8 +55,9 @@ public class ManageAction {
 //		isGrade = true;
 	}
 
+	//
 	public String gradeManage() {
-//		Map session = ActionContext.getContext().getSession();
+
 		
 		gradeList = service.getGrade();
 		
@@ -56,13 +66,25 @@ public class ManageAction {
 		
 		if (!gradeList.isEmpty()) {
 //			session.put("isGrade", "true");
-//			System.out.println(gradeList);
+			System.out.println(gradeList);
 			return "success";
 		}
 		else {
 			return "fail";
 		}
-		
+	}
+	
+	//
+	public String majorManage() {
+		majorList = service.getMajor();
+
+		if (!majorList.isEmpty()) {
+			System.out.println(majorList);
+			return "success";
+		}
+		else {
+			return "fail";
+		}
 	}
 	
 }

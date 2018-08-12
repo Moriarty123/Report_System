@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-7-30 17:09:29 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.tyt.po.Student" table="STUDENT">
+        <id name="studentNo" type="long">
+            <column name="STUDENTNO" />
+            <generator class="assigned" />
+        </id>
+        <property name="studentName" type="java.lang.String">
+            <column name="STUDENTNAME" />
+        </property>
+        <property name="password" type="java.lang.String">
+            <column name="PASSWORD" />
+        </property>
+        <property name="insititutes" type="java.lang.String">
+            <column name="INSITITUTES" />
+        </property>
+        <property name="major" type="java.lang.String">
+            <column name="MAJOR" />
+        </property>
+        <property name="grade" type="int">
+            <column name="GRADE" />
+        </property>
+        <property name="classes" type="int">
+            <column name="CLASSES" />
+        </property>
+        <property name="testStatus" type="int">
+            <column name="TESTSTATUS" />
+        </property>
+        <property name="scoreStatus" type="int">
+            <column name="SCORESTATUS" />
+        </property>
+        <property name="sex" type="java.lang.String">
+            <column name="SEX" />
+        </property>
+        <property name="roleNo" type="int">
+            <column name="ROLENO" />
+        </property>
+    </class>
+</hibernate-mapping>

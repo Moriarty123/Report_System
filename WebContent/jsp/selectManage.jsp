@@ -6,6 +6,16 @@
 <jsp:include page="base.jsp" flush="true" />
 
 
-<s:if test="gradeList==null">
- 		 <s:action name="gradeManage" namespace="/"  executeResult="true"> </s:action>
+
+
+<s:if test="majorList==null">
+ 		 <s:action name="majorManage" namespace="/"  executeResult="true"> </s:action>
 </s:if>
+
+
+<div class="container">
+	<div class="row">	
+
+	</div>
+</div>
+

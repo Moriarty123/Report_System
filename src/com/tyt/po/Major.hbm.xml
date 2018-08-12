@@ -3,9 +3,9 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 2018-7-30 17:09:29 by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
-    <class name="com.tyt.po.Grade" table="GRADE">
-        <id name="grade" type="int">
-            <column name="GRADE" />
+    <class name="com.tyt.po.Major" table="MAJOR">
+        <id name="major" type="java.lang.String">
+            <column name="MAJOR" />
             <generator class="assigned" />
         </id>
     </class>

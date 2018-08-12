@@ -36,6 +36,11 @@
 			<result name="success">showGrade.jsp</result>
 			<result name="fail">jsp/loginFail.jsp</result>
 		</action>
+		
+		<action name="majorManage" class="com.tyt.action.ManageAction" method="majorManage">
+			<result name="success">selectManage.jsp</result>
+			<result name="fail">jsp/loginFail.jsp</result>
+		</action>
 
 
 	</package>

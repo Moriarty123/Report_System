@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-7-30 17:09:29 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.tyt.po.Guide" table="GUIDE">
+        <id name="guideNo" type="long">
+            <column name="GUIDENO" />
+            <generator class="assigned" />
+        </id>
+        <property name="courseNo" type="long">
+            <column name="COURSENO" />
+        </property>
+        <property name="guideName" type="java.lang.String">
+            <column name="GUIDENAME" />
+        </property>
+        <property name="filePath" type="java.lang.String">
+            <column name="FILEPATH" />
+        </property>
+        <property name="testAim" type="java.lang.String">
+            <column name="TESTAIM" />
+        </property>
+        <property name="testEnvironment" type="java.lang.String">
+            <column name="TESTENVIRONMENT" />
+        </property>
+        <property name="testTask" type="java.lang.String">
+            <column name="TESTTASK" />
+        </property>
+        <property name="testContent" type="java.lang.String">
+            <column name="TESTCONTENT" />
+        </property>
+        <property name="testRequire" type="java.lang.String">
+            <column name="TESTREQUIRE" />
+        </property>
+    </class>
+</hibernate-mapping>

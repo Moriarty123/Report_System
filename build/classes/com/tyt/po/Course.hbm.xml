@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-7-30 17:09:29 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.tyt.po.Course" table="COURSE">
+        <id name="courseNo" type="long">
+            <column name="COURSENO" />
+            <generator class="assigned" />
+        </id>
+        <property name="courseName" type="java.lang.String">
+            <column name="COURSENAME" />
+        </property>
+        <property name="teacherNo" type="java.lang.String">
+            <column name="TEACHERNO" />
+        </property>
+        <property name="createDate" type="java.util.Date">
+            <column name="CREATEDATE" />
+        </property>
+        <property name="courseNum" type="java.lang.String">
+            <column name="COURSENUM" />
+        </property>
+        <property name="teacherName" type="java.lang.String">
+            <column name="TEACHERNAME" />
+        </property>
+        <property name="courseGrade" type="int">
+            <column name="COURSEGRADE" />
+        </property>
+        <property name="courseMajor" type="java.lang.String">
+            <column name="COURSEMAJOR" />
+        </property>
+        <property name="courseClass" type="java.lang.String">
+            <column name="COURSECLASS" />
+        </property>
+        <property name="courseTerm" type="int">
+            <column name="COURSETERM" />
+        </property>
+        <property name="courseType" type="java.lang.String">
+            <column name="COURSETYPE" />
+        </property>
+        <property name="courseNature" type="java.lang.String">
+            <column name="COURSENATURE" />
+        </property>
+        <property name="coursePeriod" type="int">
+            <column name="COURSEPERIOD" />
+        </property>
+        <property name="testPeriod" type="int">
+            <column name="TESTPERIOD" />
+        </property>
+        <property name="openTime" type="java.lang.String">
+            <column name="OPENTIME" />
+        </property>
+        <property name="credit" type="java.lang.String">
+            <column name="CREDIT" />
+        </property>
+        <property name="examType" type="java.lang.String">
+            <column name="EXAMTYPE" />
+        </property>
+    </class>
+</hibernate-mapping>
