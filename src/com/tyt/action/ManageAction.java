@@ -3,8 +3,13 @@ package com.tyt.action;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+
+import jdk.nashorn.internal.ir.RuntimeNode.Request;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.http.HttpRequest;
 
 import com.opensymphony.xwork2.ActionContext;
 import com.tyt.service.ManageService;
@@ -17,8 +22,48 @@ public class ManageAction {
 	private List classList;
 	private List courseList;
 	
+	private String grade;
+	private String classes;
+	private String course;
+	private String major;
+	
+	
+	
+	
 //	private boolean isGrade;
 	
+	public String getClasses() {
+		return classes;
+	}
+
+	public void setClasses(String classes) {
+		this.classes = classes;
+	}
+
+	public String getCourse() {
+		return course;
+	}
+
+	public void setCourse(String course) {
+		this.course = course;
+	}
+
+	public String getMajor() {
+		return major;
+	}
+
+	public void setMajor(String major) {
+		this.major = major;
+	}
+
+	public String getGrade() {
+		return grade;
+	}
+
+	public void setGrade(String grade) {
+		this.grade = grade;
+	}
+
 	public ManageService getService() {
 		return service;
 	}
@@ -131,5 +176,76 @@ public class ManageAction {
 			return "fail";
 		}
 	}
+	
+	//
+	public String deleteListItem() {
+		
+//		String itemName = 
+//		
+//		if (service.deleteListItem(hql)) {
+//			return "success";
+//		}
+//		else {
+//			return "fail";
+//		}
+		return "fail"; 
+	}
+	
+	//
+	public String deleteGrade() {
+		
+		String hql = "delete from Grade where grade =" + grade;
+		
+		if (service.deleteListItem(hql)) {
+			return "success";
+		}
+		else {
+			return "fail";
+		}
+	}
+	
+	//
+	public String deleteMajor() {
+		String hql = "delete from Major where major = '" + major + "'";
+		
+		System.out.println(hql);
+		
+		if (service.deleteListItem(hql)) {
+			return "success";
+		}
+		else {
+			return "fail";
+		}
+	}
+	
+	//
+	public String deleteCourse() {
+		String hql = "delete from Course where courseName =" + course;
+		
+		if (service.deleteListItem(hql)) {
+			return "success";
+		}
+		else {
+			return "fail";
+		}
+		
+	}
+	
+	//
+	public String deleteClass() { 
+		
+		String hql = "delete from Classes where classes =" + classes;
+		
+		if (service.deleteListItem(hql)) {
+			return "success";
+		}
+		else {
+			return "fail";
+		}
+		
+	}
+	
+	
+	
 	
 }

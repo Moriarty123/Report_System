@@ -52,5 +52,25 @@
 			<result name="fail">jsp/loginFail.jsp</result>
 		</action>
 
+		<action name="deleteGrade" class="com.tyt.action.ManageAction" method="deleteGrade">
+			<result name="success">selectManage.jsp</result>
+			<result name="fail">loginFail.jsp</result>
+		</action>
+		
+		<action name="deleteMajor" class="com.tyt.action.ManageAction" method="deleteMajor">
+			<result name="success">selectManage.jsp</result>
+			<result name="fail">loginFail.jsp</result>
+		</action>
+
+		<action name="deleteCourse" class="com.tyt.action.ManageAction" method="deleteCourse">
+			<result name="success">selectManage.jsp</result>
+			<result name="fail">loginFail.jsp</result>
+		</action>
+		
+		<action name="deleteClass" class="com.tyt.action.ManageAction" method="deleteClass">
+			<result name="success">selectManage.jsp</result>
+			<result name="fail">loginFail.jsp</result>
+		</action>
+
 	</package>
 </struts>

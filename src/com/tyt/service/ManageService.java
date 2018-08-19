@@ -55,4 +55,13 @@ public class ManageService {
 		
 		return list;
 	}
+
+	//
+	public boolean deleteListItem(String hql) {
+		
+		boolean flag = manageDAO.deleteByHql(hql);
+		
+		return flag;
+		
+	}
 }

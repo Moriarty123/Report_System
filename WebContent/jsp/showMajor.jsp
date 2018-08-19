@@ -42,7 +42,10 @@ div.col-xs-9 div {
 			<s:iterator value="majorList">
 				<tr>
 					<td><s:property /></td>
-					<td><a href="">删除</a></td>
+					<td><form action="deleteMajor" method="post">
+							<input type="hidden" name="major" value="<s:property/>">
+							<input type="submit" value="删除">
+						</form></td>
 				</tr>
 			</s:iterator>
 		</tbody>

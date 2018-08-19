@@ -7,6 +7,8 @@ import org.apache.commons.logging.LogFactory;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 
 public class ManageDAO extends HibernateDAO implements IManangeDAO{
 
@@ -63,7 +65,6 @@ public class ManageDAO extends HibernateDAO implements IManangeDAO{
 	}
 	
 	//
-
 	public List getListByHql(String hql) {
 		// TODO Auto-generated method stub
 		Session session = getSession();
@@ -86,6 +87,40 @@ public class ManageDAO extends HibernateDAO implements IManangeDAO{
 		}
 	}
 
+	//
+	public boolean deleteByHql(String hql) {
+		log.debug("delete list item instance");
+		
+		Session session = null;
+		Transaction tran = null;
+		
+		try {
+			SessionFactory sf = getSessionFactory();
+			session = sf.openSession();
+			tran = session.beginTransaction();
+	
+			String queryString = hql;
+			
+			Query query = session.createQuery(queryString);
+			query.executeUpdate();
+		
+			tran.commit();
+			return true;
+			
+		} catch (HibernateException e) {
+			// TODO Auto-generated catch block
+			if(tran != null) {
+				tran.rollback();
+			}
+			e.printStackTrace();
+		}
+		finally {
+			session.close();
+		}
+		
+		return false;
+	
+	}
 	
 
 }

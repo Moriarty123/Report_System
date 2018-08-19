@@ -42,7 +42,12 @@ div.col-xs-9 div {
 			<s:iterator value="gradeList">
 				<tr>
 					<td><s:property />级</td>
-					<td><a href="">删除</a></td>
+					<td>
+						<form action="deleteGrade" method="post">
+							<input type="hidden" name="grade" value="<s:property/>">
+							<input type="submit" value="删除">
+						</form>
+					</td>
 				</tr>
 			</s:iterator>
 
