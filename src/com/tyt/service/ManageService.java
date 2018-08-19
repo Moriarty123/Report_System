@@ -22,7 +22,7 @@ public class ManageService {
 	
 	//
 	public List getGrade() {
-		String hql = "select grade from Grade";
+		String hql = "from Grade";
 		
 		List list = manageDAO.getGrade(hql);
 		
@@ -31,7 +31,7 @@ public class ManageService {
 	
 	//
 	public List getMajor() {
-		String hql = "select major from Major";
+		String hql = "from Major";
 		
 		List list = manageDAO.getMajor(hql);
 		
@@ -40,7 +40,7 @@ public class ManageService {
 
 	//
 	public List getClasses() {
-		String hql = "select classes from Classes";
+		String hql = "from Classes";
 		
 		List list = manageDAO.getMajor(hql);
 		
@@ -49,7 +49,7 @@ public class ManageService {
 	
 	//
 	public List getCourse() {
-		String hql = "select courseName from Course";
+		String hql = "from Course";
 		
 		List list = manageDAO.getMajor(hql);
 		

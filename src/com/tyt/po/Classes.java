@@ -2,19 +2,23 @@ package com.tyt.po;
 
 public class Classes {
 
-	private int classes;
+	private int classNo;
+	private String className;
 	
-	public int getClasses() {
-		return classes;
+	public int getClassNo() {
+		return classNo;
 	}
 
-	public void setClasses(int classes) {
-		this.classes = classes;
+	public void setClassNo(int classNo) {
+		this.classNo = classNo;
 	}
 
-	public Classes(int classes) {
-		super();
-		this.classes = classes;
+	public String getClassName() {
+		return className;
+	}
+
+	public void setClassName(String className) {
+		this.className = className;
 	}
 
 	public Classes() {

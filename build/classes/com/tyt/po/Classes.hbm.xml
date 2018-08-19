@@ -1,12 +1,15 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 2018-8-12 22:29:48 by Hibernate Tools 3.4.0.CR1 -->
+<!-- Generated 2018-8-19 18:12:51 by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
     <class name="com.tyt.po.Classes" table="CLASSES">
-        <id name="classes" type="int">
-            <column name="CLASSES" />
+        <id name="classNo" type="int">
+            <column name="CLASSNO" />
             <generator class="assigned" />
         </id>
+        <property name="className" type="java.lang.String">
+            <column name="CLASSNAME" />
+        </property>
     </class>
 </hibernate-mapping>

@@ -23,7 +23,7 @@ public class ManageAction {
 	private List courseList;
 	
 	private String grade;
-	private String classes;
+	private String classNo;
 	private String course;
 	private String major;
 	
@@ -32,12 +32,12 @@ public class ManageAction {
 	
 //	private boolean isGrade;
 	
-	public String getClasses() {
-		return classes;
+	public String getClassNo() {
+		return classNo;
 	}
 
-	public void setClasses(String classes) {
-		this.classes = classes;
+	public void setClassNo(String classes) {
+		this.classNo = classes;
 	}
 
 	public String getCourse() {
@@ -122,15 +122,10 @@ public class ManageAction {
 	//
 	public String gradeManage() {
 
-		
 		gradeList = service.getGrade();
-		
-//		isGrade = false;
-//		System.out.println(gradeList.isEmpty());
-		
+
 		if (!gradeList.isEmpty()) {
-//			session.put("isGrade", "true");
-//			System.out.println(gradeList);
+
 			return "success";
 		}
 		else {
@@ -143,7 +138,6 @@ public class ManageAction {
 		majorList = service.getMajor();
 
 		if (!majorList.isEmpty()) {
-			System.out.println(majorList);
 			return "success";
 		}
 		else {
@@ -156,7 +150,6 @@ public class ManageAction {
 		classList = service.getClasses();
 
 		if (!classList.isEmpty()) {
-			System.out.println(classList);
 			return "success";
 		}
 		else {
@@ -169,7 +162,6 @@ public class ManageAction {
 		courseList = service.getCourse();
 
 		if (!courseList.isEmpty()) {
-			System.out.println(courseList);
 			return "success";
 		}
 		else {
@@ -206,9 +198,9 @@ public class ManageAction {
 	
 	//
 	public String deleteMajor() {
-		String hql = "delete from Major where major = '" + major + "'";
+		String hql = "delete from Major where majorNo = '" + major + "'";
 		
-		System.out.println(hql);
+//		System.out.println(hql);
 		
 		if (service.deleteListItem(hql)) {
 			return "success";
@@ -220,7 +212,7 @@ public class ManageAction {
 	
 	//
 	public String deleteCourse() {
-		String hql = "delete from Course where courseName =" + course;
+		String hql = "delete from Course where courseNo =" + course;
 		
 		if (service.deleteListItem(hql)) {
 			return "success";
@@ -234,7 +226,7 @@ public class ManageAction {
 	//
 	public String deleteClass() { 
 		
-		String hql = "delete from Classes where classes =" + classes;
+		String hql = "delete from Classes where classNo =" + classNo;
 		
 		if (service.deleteListItem(hql)) {
 			return "success";
@@ -244,8 +236,5 @@ public class ManageAction {
 		}
 		
 	}
-	
-	
-	
 	
 }

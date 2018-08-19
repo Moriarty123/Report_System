@@ -41,11 +41,11 @@ div.col-xs-9 div {
 
 			<s:iterator value="gradeList">
 				<tr>
-					<td><s:property />级</td>
+					<td><s:property value="grade"/>级</td>
 					<td>
 						<form action="deleteGrade" method="post">
-							<input type="hidden" name="grade" value="<s:property/>">
-							<input type="submit" value="删除">
+							<input type="hidden" name="grade" value="<s:property value="grade"/>">
+							<input class="rearchSubmit btn btn-primary" type="submit" value="删除">
 						</form>
 					</td>
 				</tr>

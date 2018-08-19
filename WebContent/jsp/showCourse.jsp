@@ -34,6 +34,7 @@ div.col-xs-9 div {
 		<thead>
 			<tr>
 				<th>课程</th>
+				<th>教师</th>
 				<th>操作</th>
 			</tr>
 		</thead>
@@ -41,10 +42,11 @@ div.col-xs-9 div {
 
 			<s:iterator value="courseList">
 				<tr>
-					<td><s:property /></td>
+					<td><s:property value="courseName"/></td>
+					<td><s:property value="teacherName"/></td>
 					<td><form action="deleteCourse" method="post">
-							<input type="hidden" name="course" value="<s:property/>">
-							<input type="submit" value="删除">
+							<input type="hidden" name="course" value="<s:property value="courseNo"/>">
+							<input class="rearchSubmit btn btn-primary" type="submit" value="删除">
 						</form></td>
 				</tr>
 			</s:iterator>
