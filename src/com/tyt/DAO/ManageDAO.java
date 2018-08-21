@@ -10,6 +10,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
+import com.tyt.po.Grade;
+
 public class ManageDAO extends HibernateDAO implements IManangeDAO{
 
 	private Log log = LogFactory.getLog(UserDAO.class);
@@ -120,6 +122,49 @@ public class ManageDAO extends HibernateDAO implements IManangeDAO{
 		
 		return false;
 	
+	}
+	
+	//
+	public boolean saveGrade(Grade grade, String hql) {
+		log.debug("save grade instance");
+		
+		Session session = null;
+		Transaction tran = null;
+		
+
+		try {
+			SessionFactory sf = getSessionFactory();
+			session = sf.openSession();
+			tran = session.beginTransaction();
+			
+			String queryString = hql;
+//			System.out.println(hql);
+			Query query = session.createQuery(queryString);
+			
+			List list = query.list();
+			
+			//涓嶅瓨鍦ㄥ凡鏈夌敤鎴�
+			if(list.isEmpty()) {
+				session.save(grade);
+				tran.commit();
+				return true;
+			}
+			else {
+				return false;
+			}
+			
+		} catch (HibernateException e) {
+			// TODO Auto-generated catch block
+			if(tran != null) {
+				tran.rollback();
+			}
+			e.printStackTrace();
+		}
+		finally {
+			session.close();
+		}
+		
+		return false;
 	}
 	
 

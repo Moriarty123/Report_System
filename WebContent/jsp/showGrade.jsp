@@ -44,7 +44,7 @@ div.col-xs-9 div {
 					<td><s:property value="grade"/>级</td>
 					<td>
 						<form action="deleteGrade" method="post">
-							<input type="hidden" name="grade" value="<s:property value="grade"/>">
+							<input type="hidden" name="grade.grade" value="<s:property value="grade"/>">
 							<input class="rearchSubmit btn btn-primary" type="submit" value="删除">
 						</form>
 					</td>

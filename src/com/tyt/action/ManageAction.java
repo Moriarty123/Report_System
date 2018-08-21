@@ -12,6 +12,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.http.HttpRequest;
 
 import com.opensymphony.xwork2.ActionContext;
+import com.tyt.po.*;
 import com.tyt.service.ManageService;
 
 public class ManageAction {
@@ -22,24 +23,17 @@ public class ManageAction {
 	private List classList;
 	private List courseList;
 	
-	private String grade;
-	private String classNo;
+//	private String grade;
+//	private String classNo;
 	private String course;
-	private String major;
+//	private String major;
 	
-	
-	
+	private Grade grade;
+	private Classes classes;
+	private Major major;
 	
 //	private boolean isGrade;
 	
-	public String getClassNo() {
-		return classNo;
-	}
-
-	public void setClassNo(String classes) {
-		this.classNo = classes;
-	}
-
 	public String getCourse() {
 		return course;
 	}
@@ -48,19 +42,27 @@ public class ManageAction {
 		this.course = course;
 	}
 
-	public String getMajor() {
+	public Classes getClasses() {
+		return classes;
+	}
+
+	public void setClasses(Classes classes) {
+		this.classes = classes;
+	}
+
+	public Major getMajor() {
 		return major;
 	}
 
-	public void setMajor(String major) {
+	public void setMajor(Major major) {
 		this.major = major;
 	}
 
-	public String getGrade() {
+	public Grade getGrade() {
 		return grade;
 	}
 
-	public void setGrade(String grade) {
+	public void setGrade(Grade grade) {
 		this.grade = grade;
 	}
 
@@ -186,7 +188,8 @@ public class ManageAction {
 	//
 	public String deleteGrade() {
 		
-		String hql = "delete from Grade where grade =" + grade;
+		int gradeNo = grade.getGrade();
+		String hql = "delete from Grade where grade = " + gradeNo;
 		
 		if (service.deleteListItem(hql)) {
 			return "success";
@@ -198,7 +201,9 @@ public class ManageAction {
 	
 	//
 	public String deleteMajor() {
-		String hql = "delete from Major where majorNo = '" + major + "'";
+		
+		String majorNo = major.getMajor();
+		String hql = "delete from Major where majorNo = '" + majorNo + "'";
 		
 //		System.out.println(hql);
 		
@@ -226,6 +231,7 @@ public class ManageAction {
 	//
 	public String deleteClass() { 
 		
+		int classNo = classes.getClassNo();
 		String hql = "delete from Classes where classNo =" + classNo;
 		
 		if (service.deleteListItem(hql)) {
@@ -237,4 +243,13 @@ public class ManageAction {
 		
 	}
 	
+	//
+	public String saveGrade() {
+		
+		if (service.saveGrade(grade)) {
+			
+		}
+		
+		return "fail";
+	}
 }

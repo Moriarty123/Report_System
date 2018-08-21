@@ -43,7 +43,7 @@ div.col-xs-9 div {
 				<tr>
 					<td><s:property value="className" /></td>
 					<td><form action="deleteClass" method="post">
-							<input type="hidden" name="classNo" value="<s:property value="classNo"/>">
+							<input type="hidden" name="classes.classNo" value="<s:property value="classNo"/>">
 							<input class="rearchSubmit btn btn-primary" type="submit" value="删除">
 						</form></td>
 				</tr>

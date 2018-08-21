@@ -43,7 +43,7 @@ div.col-xs-9 div {
 				<tr>
 					<td><s:property value="major" /></td>
 					<td><form action="deleteMajor" method="post">
-							<input type="hidden" name="major" value="<s:property value="majorNo"/>">
+							<input type="hidden" name="major.major" value="<s:property value="majorNo"/>">
 							<input class="rearchSubmit btn btn-primary" type="submit" value="删除">
 						</form></td>
 				</tr>

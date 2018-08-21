@@ -3,6 +3,7 @@ package com.tyt.service;
 import java.util.List;
 
 import com.tyt.DAO.ManageDAO;
+import com.tyt.po.Grade;
 
 public class ManageService {
 
@@ -64,4 +65,21 @@ public class ManageService {
 		return flag;
 		
 	}
+
+	//
+	public boolean saveGrade(Grade newgrade) {
+		
+		int grade = newgrade.getGrade();
+		
+		String hql = "from Grade where grade = '" + grade + "'";
+//		System.out.println(hql);
+		if(manageDAO.saveGrade(newgrade, hql)) {
+			return true;
+		}
+		
+		return false;
+		
+	}
+
+
 }
