@@ -9,10 +9,15 @@
 
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
 
+
+
 	<div class="container">
 		<div class="row">
+
+
+
 			<nav class="col-xs-3" id="myScrollspy">
-			
+
 				<div class="container-fluid">
 					<div class="container-fluid">
 						<ul class="nav nav-pills nav-stacked list-group">
@@ -27,6 +32,21 @@
 			</nav>
 			<div class="col-xs-9">
 
+				<s:if test="hasActionErrors()">
+					<div class="alert alert-warning">
+						<a href="#" class="close" data-dismiss="alert"> &times; </a>
+						${error}
+					</div>
+				</s:if>
+
+				<s:if test="hasActionMessages()">
+					<div class="alert alert-success">
+						<a href="#" class="close" data-dismiss="alert"> &times; </a>
+						${message}
+					</div>
+				</s:if>
+				
+				
 
 				<div id="section1">
 					<s:if test="gradeList==null">
@@ -35,8 +55,7 @@
 					</s:if>
 				</div>
 				<HR style="border: 0">
-				<br>
-				<br>
+				<br> <br>
 
 				<div id="section2">
 					<s:if test="majorList==null">
@@ -45,8 +64,7 @@
 					</s:if>
 				</div>
 				<HR style="border: 0">
-				<br>
-				<br>
+				<br> <br>
 
 				<div id="section3">
 					<s:if test="classList==null">
@@ -55,9 +73,8 @@
 					</s:if>
 				</div>
 				<HR style="border: 0">
-				<br>
-				<br>
-				
+				<br> <br>
+
 				<div id="section4">
 					<s:if test="courseList==null">
 						<s:action name="courseManage" namespace="/" executeResult="true">
@@ -65,8 +82,7 @@
 					</s:if>
 				</div>
 				<HR style="border: 0">
-				<br>
-				<br>
+				<br> <br>
 			</div>
 		</div>
 	</div>

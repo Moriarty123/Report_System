@@ -72,5 +72,20 @@
 			<result name="fail">loginFail.jsp</result>
 		</action>
 
+		<action name="saveGrade" class="com.tyt.action.ManageAction" method="saveGrade">
+			<result name="success">selectManage.jsp</result>
+			<result name="fail">selectManage.jsp</result>
+		</action>
+		
+		<action name="saveMajor" class="com.tyt.action.ManageAction" method="saveMajor">
+			<result name="success">selectManage.jsp</result>
+			<result name="fail">loginFail.jsp</result>
+		</action>
+		
+		<action name="saveClass" class="com.tyt.action.ManageAction" method="saveClass">
+			<result name="success">selectManage.jsp</result>
+			<result name="fail">loginFail.jsp</result>
+		</action>
+
 	</package>
 </struts>

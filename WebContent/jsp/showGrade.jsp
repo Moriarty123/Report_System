@@ -56,10 +56,10 @@ div.col-xs-9 div {
 </div>
 <table>
 	<form class="bs-example bs-example-form" role="form"
-		action="/selectManage" method="POST">
+		action="saveGrade" method="POST">
 		<div class="col-lg-9">
 			<div class="input-group">
-				<input name="grade" type="text" class="form-control"
+				<input name="grade.grade" type="text" class="form-control"
 					placeholder="请输入年级，如：2014" pattern="[0-9]{4}" required> <span
 					class="input-group-btn"> <input
 					class="rearchSubmit btn btn-primary" type="submit" value="添加年级">

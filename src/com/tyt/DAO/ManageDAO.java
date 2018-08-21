@@ -11,6 +11,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 import com.tyt.po.Grade;
+import com.tyt.po.Major;
 
 public class ManageDAO extends HibernateDAO implements IManangeDAO{
 
@@ -167,5 +168,48 @@ public class ManageDAO extends HibernateDAO implements IManangeDAO{
 		return false;
 	}
 	
+	//
+	public boolean saveMajor(Major major, String hql) {
+		log.debug("save major instance");
+		
+		Session session = null;
+		Transaction tran = null;
+		
 
+		try {
+			SessionFactory sf = getSessionFactory();
+			session = sf.openSession();
+			tran = session.beginTransaction();
+			
+			String queryString = hql;
+//			System.out.println(hql);
+			Query query = session.createQuery(queryString);
+			
+			List list = query.list();
+			
+			
+			if(list.isEmpty()) {
+				session.save(major);
+				tran.commit();
+				return true;
+			}
+			else {
+				return false;
+			}
+			
+		} catch (HibernateException e) {
+			// TODO Auto-generated catch block
+			if(tran != null) {
+				tran.rollback();
+			}
+			e.printStackTrace();
+		}
+		finally {
+			session.close();
+		}
+		
+		return false;
+	}
+	
+	
 }
