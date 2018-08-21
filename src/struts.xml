@@ -79,12 +79,12 @@
 		
 		<action name="saveMajor" class="com.tyt.action.ManageAction" method="saveMajor">
 			<result name="success">selectManage.jsp</result>
-			<result name="fail">loginFail.jsp</result>
+			<result name="fail">selectManage.jsp</result>
 		</action>
 		
 		<action name="saveClass" class="com.tyt.action.ManageAction" method="saveClass">
 			<result name="success">selectManage.jsp</result>
-			<result name="fail">loginFail.jsp</result>
+			<result name="fail">selectManage.jsp</result>
 		</action>
 
 	</package>

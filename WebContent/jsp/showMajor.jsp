@@ -53,10 +53,10 @@ div.col-xs-9 div {
 </div>
 <table>
 	<form class="bs-example bs-example-form" role="form"
-		action="/selectManage" method="POST">
+		action="saveMajor" method="POST">
 		<div class="col-lg-9">
 			<div class="input-group">
-				<input name="major" type="text" class="form-control"
+				<input name="major.major" type="text" class="form-control"
 					placeholder="请输入专业，如：计算机科学与技术" required=""> <span
 					class="input-group-btn"> <input
 					class="rearchSubmit btn btn-primary" type="submit" value="添加专业">

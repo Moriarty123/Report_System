@@ -2,8 +2,11 @@ package com.tyt.service;
 
 import java.util.List;
 
+import org.springframework.cglib.core.ClassesKey;
+
 import com.tyt.DAO.ManageDAO;
-import com.tyt.po.Grade;
+import com.tyt.po.*;
+
 
 public class ManageService {
 
@@ -81,5 +84,33 @@ public class ManageService {
 		
 	}
 
+	//
+	public boolean saveMajor(Major major) {
+		
+		String majorName = major.getMajor();
+		
+		String hql = "from Major where major = '" + majorName + "'";
+
+		if(manageDAO.saveMajor(major, hql)) {
+			return true;
+		}
+		
+		return false;
+		
+		
+	}
+	
+	//
+	public boolean saveClass(Classes classes) {
+		String className = classes.getClassName();
+		
+		String hql = "from Classes where className = '" + className + "'";
+
+		if(manageDAO.saveClass(classes, hql)) {
+			return true;
+		}
+		
+		return false;
+	}
 
 }

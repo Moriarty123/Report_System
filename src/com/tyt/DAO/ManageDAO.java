@@ -1,5 +1,6 @@
 package com.tyt.DAO;
 
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 import org.apache.commons.logging.Log;
@@ -9,9 +10,10 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.springframework.cglib.core.ClassesKey;
 
-import com.tyt.po.Grade;
-import com.tyt.po.Major;
+import com.tyt.po.*;
+
 
 public class ManageDAO extends HibernateDAO implements IManangeDAO{
 
@@ -175,7 +177,16 @@ public class ManageDAO extends HibernateDAO implements IManangeDAO{
 		Session session = null;
 		Transaction tran = null;
 		
-
+//		System.out.println(major.getMajor());
+//		String majorName = major.getMajor();
+//		try {
+//			majorName = new String(majorName.getBytes(), "ISO8859_1");
+//			major.setMajor(majorName);
+//		} catch (UnsupportedEncodingException e1) {
+//			// TODO Auto-generated catch block
+//			e1.printStackTrace();
+//		}
+		
 		try {
 			SessionFactory sf = getSessionFactory();
 			session = sf.openSession();
@@ -211,5 +222,53 @@ public class ManageDAO extends HibernateDAO implements IManangeDAO{
 		return false;
 	}
 	
+	//
+	public boolean saveClass(Classes classes, String hql) {
+		log.debug("save major instance");
+		
+		Session session = null;
+		Transaction tran = null;
+		
+
+		try {
+			SessionFactory sf = getSessionFactory();
+			session = sf.openSession();
+			tran = session.beginTransaction();
+			
+			String queryString = hql;
+//			System.out.println(hql);
+			Query query = session.createQuery(queryString);
+			
+			List list = query.list();
+			
+			
+			if(list.isEmpty()) {
+				session.save(classes);
+				tran.commit();
+				return true;
+			}
+			else {
+				return false;
+			}
+			
+		} catch (HibernateException e) {
+			// TODO Auto-generated catch block
+			if(tran != null) {
+				tran.rollback();
+			}
+			e.printStackTrace();
+		}
+		finally {
+			session.close();
+		}
+		
+		return false;
+	}
 	
+	//
+	public boolean saveListItem(Grade grade, String hql) {
+		
+		
+		return false;
+	}
 }

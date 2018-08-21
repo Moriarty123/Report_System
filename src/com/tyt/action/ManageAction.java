@@ -269,11 +269,44 @@ public class ManageAction extends ActionSupport {
 			ActionContext.getContext().put("message", "添加年级成功！");
 			return "success";
 		} else {
-			addActionError("年级已存在！");
-			ActionContext.getContext().put("error", "年级已存在！");
+			addActionError("该年级已存在！");
+			ActionContext.getContext().put("error", "该年级已存在！");
 			return "fail";
 		}
 
 	}
 
+	//
+	public String saveMajor() {
+		
+		System.out.println(major.getMajor());
+		
+		if (service.saveMajor(major)) {
+			addActionMessage("添加专业成功！");
+			ActionContext.getContext().put("message", "添加专业成功！");
+			return "success";
+		} else {
+			addActionError("该专业已存在！");
+			ActionContext.getContext().put("error", "该专业已存在！");
+			return "fail";
+		}
+		
+	}
+	
+	//
+	public String saveClass() {
+		
+		if (service.saveClass(classes)) {
+			addActionMessage("添加班级成功！");
+			ActionContext.getContext().put("message", "添加班级成功！");
+			return "success";
+		} else {
+			addActionError("该班级已存在！");
+			ActionContext.getContext().put("error", "该班级已存在！");
+			return "fail";
+		}
+		
+	}
+	
+	
 }
