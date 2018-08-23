@@ -34,7 +34,7 @@ div.col-xs-9 div {
 		<thead>
 			<tr>
 				<th>年级</th>
-				<th>操作</th>
+				<th class="pull-right">操作</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -45,7 +45,7 @@ div.col-xs-9 div {
 					<td>
 						<form action="deleteGrade" method="post">
 							<input type="hidden" name="grade.grade" value="<s:property value="grade"/>">
-							<input class="rearchSubmit btn btn-primary" type="submit" value="删除">
+							<input class="rearchSubmit btn btn-primary pull-right" type="submit" value="删除">
 						</form>
 					</td>
 				</tr>

@@ -34,7 +34,7 @@ div.col-xs-9 div {
 		<thead>
 			<tr>
 				<th>班级</th>
-				<th>操作</th>
+				<th class="pull-right">操作</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -44,7 +44,7 @@ div.col-xs-9 div {
 					<td><s:property value="className" /></td>
 					<td><form action="deleteClass" method="post">
 							<input type="hidden" name="classes.classNo" value="<s:property value="classNo"/>">
-							<input class="rearchSubmit btn btn-primary" type="submit" value="删除">
+							<input class="rearchSubmit btn btn-primary pull-right" type="submit" value="删除">
 						</form></td>
 				</tr>
 			</s:iterator>
@@ -58,7 +58,7 @@ div.col-xs-9 div {
 		<div class="col-lg-9">
 			<div class="input-group">
 				<input name="classes.className" type="text" class="form-control"
-					placeholder="请输入班级，如：1" required="" > <span
+					placeholder="请输入班级，如：2015计技3班" required="" > <span
 					class="input-group-btn"> <input
 					class="rearchSubmit btn btn-primary" type="submit" value="添加班级">
 				</span>

@@ -35,7 +35,7 @@ div.col-xs-9 div {
 		<thead>
 			<tr>
 				<th>专业</th>
-				<th>操作</th>
+				<th class="pull-right">操作</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -44,7 +44,7 @@ div.col-xs-9 div {
 					<td><s:property value="major" /></td>
 					<td><form action="deleteMajor" method="post">
 							<input type="hidden" name="major.major" value="<s:property value="majorNo"/>">
-							<input class="rearchSubmit btn btn-primary" type="submit" value="删除">
+							<input class="rearchSubmit btn btn-primary pull-right"  type="submit" value="删除">
 						</form></td>
 				</tr>
 			</s:iterator>
@@ -59,7 +59,7 @@ div.col-xs-9 div {
 				<input name="major.major" type="text" class="form-control"
 					placeholder="请输入专业，如：计算机科学与技术" required=""> <span
 					class="input-group-btn"> <input
-					class="rearchSubmit btn btn-primary" type="submit" value="添加专业">
+					class="rearchSubmit btn btn-primary pull-right" type="submit" value="添加专业">
 				</span>
 			</div>
 		</div>
