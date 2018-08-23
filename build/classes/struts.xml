@@ -38,8 +38,53 @@
 		</action>
 		
 		<action name="majorManage" class="com.tyt.action.ManageAction" method="majorManage">
-			<result name="success">selectManage.jsp</result>
+			<result name="success">showMajor.jsp</result>
 			<result name="fail">jsp/loginFail.jsp</result>
+		</action>
+		
+		<action name="classManage" class="com.tyt.action.ManageAction" method="classManage">
+			<result name="success">showClass.jsp</result>
+			<result name="fail">jsp/loginFail.jsp</result>
+		</action>
+
+		<action name="courseManage" class="com.tyt.action.ManageAction" method="courseManage">
+			<result name="success">showCourse.jsp</result>
+			<result name="fail">jsp/loginFail.jsp</result>
+		</action>
+
+		<action name="deleteGrade" class="com.tyt.action.ManageAction" method="deleteGrade">
+			<result name="success">selectManage.jsp</result>
+			<result name="fail">loginFail.jsp</result>
+		</action>
+		
+		<action name="deleteMajor" class="com.tyt.action.ManageAction" method="deleteMajor">
+			<result name="success">selectManage.jsp</result>
+			<result name="fail">loginFail.jsp</result>
+		</action>
+
+		<action name="deleteCourse" class="com.tyt.action.ManageAction" method="deleteCourse">
+			<result name="success">selectManage.jsp</result>
+			<result name="fail">loginFail.jsp</result>
+		</action>
+		
+		<action name="deleteClass" class="com.tyt.action.ManageAction" method="deleteClass">
+			<result name="success">selectManage.jsp</result>
+			<result name="fail">loginFail.jsp</result>
+		</action>
+
+		<action name="saveGrade" class="com.tyt.action.ManageAction" method="saveGrade">
+			<result name="success">selectManage.jsp</result>
+			<result name="fail">selectManage.jsp</result>
+		</action>
+		
+		<action name="saveMajor" class="com.tyt.action.ManageAction" method="saveMajor">
+			<result name="success">selectManage.jsp</result>
+			<result name="fail">selectManage.jsp</result>
+		</action>
+		
+		<action name="saveClass" class="com.tyt.action.ManageAction" method="saveClass">
+			<result name="success">selectManage.jsp</result>
+			<result name="fail">selectManage.jsp</result>
 		</action>
 
 

@@ -20,9 +20,10 @@
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://localhost:3306/test_report" />
+		<property name="url" value="jdbc:mysql://localhost:3306/test_report?useUnicode=true&amp;characterEncoding=UTF-8" />
 		<property name="username" value="root" />
 		<property name="password" value="123456" />
+		
 	</bean>
 
 	<!-- sessionFactory配置 -->
@@ -39,6 +40,8 @@
 				<value>com/tyt/po/User.hbm.xml</value>
 				<value>com/tyt/po/Grade.hbm.xml</value>
 				<value>com/tyt/po/Major.hbm.xml</value>
+				<value>com/tyt/po/Classes.hbm.xml</value>
+				<value>com/tyt/po/Course.hbm.xml</value>
 			</list>
 		</property>
 	</bean>

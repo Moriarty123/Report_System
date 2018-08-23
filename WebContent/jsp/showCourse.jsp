@@ -30,24 +30,24 @@ div.col-xs-9 div {
 
 <div class="col-xs-9">
 	<table class="table">
-		<h3>现有年级：</h3>
+		<h3>现有课程：</h3>
 		<thead>
 			<tr>
-				<th>年级</th>
-				<th class="pull-right">操作</th>
+				<th>课程</th>
+				<th>教师</th>
+				<th>操作</th>
 			</tr>
 		</thead>
 		<tbody>
 
-			<s:iterator value="gradeList">
+			<s:iterator value="courseList">
 				<tr>
-					<td><s:property value="grade"/>级</td>
-					<td>
-						<form action="deleteGrade" method="post">
-							<input type="hidden" name="grade.grade" value="<s:property value="grade"/>">
-							<input class="rearchSubmit btn btn-primary pull-right" type="submit" value="删除">
-						</form>
-					</td>
+					<td><s:property value="courseName"/></td>
+					<td><s:property value="teacherName"/></td>
+					<td><form action="deleteCourse" method="post">
+							<input type="hidden" name="course" value="<s:property value="courseNo"/>">
+							<input class="rearchSubmit btn btn-primary" type="submit" value="删除">
+						</form></td>
 				</tr>
 			</s:iterator>
 
@@ -56,13 +56,13 @@ div.col-xs-9 div {
 </div>
 <table>
 	<form class="bs-example bs-example-form" role="form"
-		action="saveGrade" method="POST">
-		<div class="col-lg-9">
+		action="/selectManage" method="POST">
+		<div class="col-lg-6">
 			<div class="input-group">
-				<input name="grade.grade" type="text" class="form-control"
-					placeholder="请输入年级，如：2014" pattern="[0-9]{4}" required> <span
+				<input name="courseName" type="text" class="form-control"
+					placeholder="请输入课程，如：操作系统" required=""> <span
 					class="input-group-btn"> <input
-					class="rearchSubmit btn btn-primary" type="submit" value="添加年级">
+					class="rearchSubmit btn btn-primary" type="submit" value="添加课程">
 				</span>
 			</div>
 		</div>
